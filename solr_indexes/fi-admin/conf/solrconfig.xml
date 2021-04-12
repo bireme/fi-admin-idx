@@ -445,6 +445,7 @@
       -->
      <lst name="defaults">
          <str name="echoParams">explicit</str>
+         <str name="df">tw</str>
          <str name="facet">true</str>
          <str name="facet.field">descriptor_filter</str>
          <str name="facet.field">media_collection_filter</str>

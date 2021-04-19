@@ -11,3 +11,4 @@ services:
     user: "${USER_GROUP_IDS}"
     volumes:
       - ./solr_indexes:/opt/solr/server/solr/mycores
+      - ./conf/solr.in.sh:/opt/solr/bin/solr.in.sh

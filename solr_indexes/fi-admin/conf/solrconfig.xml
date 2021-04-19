@@ -34,7 +34,7 @@
   -->
   <luceneMatchVersion>5.4.1</luceneMatchVersion>
 
-  <lib dir="../lib" />
+  <!--lib dir="../lib" /-->
 
   <!-- Data Directory
 

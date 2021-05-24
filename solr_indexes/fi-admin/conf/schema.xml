@@ -263,8 +263,10 @@
     <!-- content fulltext field -->
     <field name="content" type="text" indexed="true" stored="true" multiValued="false"/>
 
-    <!-- Dynamic field definitions -->
+    <!-- dynamic field definitions -->
     <dynamicField name="*" type="text" indexed="true" stored="true" multiValued="true"/>
+    <!-- dynamic field used for collection filters -->
+    <dynamicField name="collection_*" type="string" indexed="true" stored="false" multiValued="true"/>
 
     <!-- catchall field, containing all other searchable text fields (implemented
           via copyField further on in this schema  -->

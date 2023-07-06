@@ -199,6 +199,7 @@
     <field name="contact_email" type="string" indexed="false" stored="true"/>
     <field name="contact_info" type="text" indexed="true" stored="true"/>
     <field name="event_type" type="string" indexed="true" stored="true" multiValued="true"/>
+    <field name="year_filter" type="dateiso" indexed="true" stored="false" multiValued="true" />
 
     <!-- multimedia -->
     <field name="description" type="text" indexed="true" stored="true" multiValued="true"/>
@@ -309,5 +310,7 @@
  <copyField source="keyword" dest="kw"/>
 
  <copyField source="media_collection" dest="media_collection_filter"/>
+
+ <copyField source="start_date" dest="year_filter" />
 
 </schema>

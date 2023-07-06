@@ -453,7 +453,7 @@
          <str name="facet.field">event_type</str>
          <str name="facet.field">institution_type</str>
          <str name="facet.field">institution_thematic</str>
-         <str name="facet.field">thematic_area_display</str>      
+         <str name="facet.field">thematic_area_display</str>
          <str name="facet.field">type</str>
          <str name="facet.field">format</str>
          <str name="facet.field">country</str>
@@ -461,6 +461,7 @@
          <str name="facet.field">publication_language</str>
          <str name="facet.field">publication_country</str>
          <str name="facet.field">publication_year</str>
+         <str name="facet.field">year_filter</str>
          <str name="facet.field">journal</str>
          <str name="facet.field">indexed_database</str>
          <str name="facet.field">database</str>

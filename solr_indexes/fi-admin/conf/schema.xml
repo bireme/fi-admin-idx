@@ -311,6 +311,6 @@
 
  <copyField source="media_collection" dest="media_collection_filter"/>
 
- <copyField source="start_date" dest="year_filter" />
+ <copyField source="start_date" dest="publication_year" />
 
 </schema>

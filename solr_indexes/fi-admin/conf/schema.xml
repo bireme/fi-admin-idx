@@ -212,6 +212,7 @@
 
     <!-- bibliographic references -->
     <field name="reference_title" type="text" indexed="true" stored="true" termVectors="true" multiValued="true"/>
+    <field name="english_title" type="string" indexed="false" stored="true" multiValued="false"/>
     <field name="reference_abstract" type="text" indexed="true" stored="true" termVectors="true" multiValued="true"/>
     <field name="reference_source" type="string" indexed="false" stored="true" multiValued="false"/>
     <field name="database" type="string" indexed="true" stored="true" multiValued="true"/>
@@ -296,6 +297,7 @@
  <copyField source="mh" dest="tw"/>
 
  <copyField source="reference_title" dest="tw"/>
+ <copyField source="english_title" dest="tw"/>
  <copyField source="reference_abstract" dest="tw"/>
 
  <copyField source="content" dest="tw"/>

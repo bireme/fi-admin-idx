@@ -315,5 +315,7 @@
  <copyField source="media_collection" dest="media_collection_filter"/>
 
  <copyField source="start_date" dest="publication_year" />
+ <!-- copy lis source_language field to filter language -->
+ <copyField source="source_language_display" dest="language" />
 
 </schema>

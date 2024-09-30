@@ -480,6 +480,7 @@
          <str name="facet.field">audience</str>
          <str name="facet.field">license</str>
          <str name="facet.field">language</str>
+         <str name="facet.field">status</str>
          <str name="facet.limit">20</str>
          <str name="facet.mincount">1</str>
      </lst>

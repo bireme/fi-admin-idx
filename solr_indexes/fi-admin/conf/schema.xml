@@ -265,6 +265,9 @@
     <!-- content fulltext field -->
     <field name="content" type="text" indexed="true" stored="true" multiValued="false"/>
 
+    <!-- sort fields -->
+    <field name="title_sort" type="string_lowercase" indexed="true" stored="false" multiValued="false"/>
+
     <!-- dynamic field definitions -->
     <dynamicField name="*" type="text" indexed="true" stored="true" multiValued="true"/>
     <!-- dynamic field used for collection filters -->
@@ -315,7 +318,10 @@
  <copyField source="media_collection" dest="media_collection_filter"/>
 
  <copyField source="start_date" dest="publication_year" />
- <!-- copy lis source_language field to filter language -->
+ <!-- Copy lis source_language field to filter language -->
  <copyField source="source_language_display" dest="language" />
+
+<!-- Sort -->
+<copyField source="title" dest="title_sort"/>
 
 </schema>

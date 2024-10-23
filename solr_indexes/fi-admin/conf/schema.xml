@@ -115,10 +115,10 @@
     <fieldType name="string_normalized"        class="solr.TextField">
       <analyzer>
         <tokenizer class="solr.KeywordTokenizerFactory" />
+           <filter class="solr.TrimFilterFactory" />
            <filter class="solr.ASCIIFoldingFilterFactory" />
            <filter class="solr.PatternReplaceFilterFactory"        pattern="([\.])"      replacement="" replace="all" />
            <filter class="solr.LowerCaseFilterFactory" />
-           <!-- filter class="solr.TrimFilterFactory" / -->
       </analyzer>
     </fieldType>
 

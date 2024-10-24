@@ -98,6 +98,7 @@
     <fieldType name="string_lowercase"                class="solr.TextField" positionIncrementGap="100">
       <analyzer>
         <tokenizer class="solr.KeywordTokenizerFactory" />
+        <filter class="solr.TrimFilterFactory" />
         <filter class="solr.ASCIIFoldingFilterFactory"/>
         <filter class="solr.LowerCaseFilterFactory" />
       </analyzer>

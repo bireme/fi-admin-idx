@@ -109,6 +109,7 @@
       <analyzer type="query">
         <tokenizer class="solr.WhitespaceTokenizerFactory" />
            <filter class="solr.ASCIIFoldingFilterFactory" />
+           <filter class="solr.PatternReplaceFilterFactory" pattern="([\.])"  replacement="" replace="all" />
            <filter class="solr.LowerCaseFilterFactory" />
       </analyzer>
     </fieldType>
@@ -118,7 +119,7 @@
         <tokenizer class="solr.KeywordTokenizerFactory" />
            <filter class="solr.TrimFilterFactory" />
            <filter class="solr.ASCIIFoldingFilterFactory" />
-           <filter class="solr.PatternReplaceFilterFactory"        pattern="([\.])"      replacement="" replace="all" />
+           <filter class="solr.PatternReplaceFilterFactory" pattern="([\.])" replacement="" replace="all" />
            <filter class="solr.LowerCaseFilterFactory" />
       </analyzer>
     </fieldType>

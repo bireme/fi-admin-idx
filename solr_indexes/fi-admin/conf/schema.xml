@@ -109,7 +109,6 @@
       <analyzer type="query">
         <tokenizer class="solr.WhitespaceTokenizerFactory" />
            <filter class="solr.ASCIIFoldingFilterFactory" />
-           <filter class="solr.PatternReplaceFilterFactory" pattern="([\.])"  replacement="" replace="all" />
            <filter class="solr.LowerCaseFilterFactory" />
       </analyzer>
     </fieldType>
@@ -257,6 +256,11 @@
     <field name="institution_type" type="string" indexed="true" stored="true" multiValued="true"/>
     <field name="institution_thematic" type="string" indexed="true" stored="true" multiValued="true"/>
 
+    <!-- title -->
+    <field name="shortened_title" type="text" indexed="true" stored="true" multiValued="true"/>
+    <field name="medline_shortened_title" type="text" indexed="true" stored="true" multiValued="true"/>
+    <field name="short_title" type="string" indexed="true" stored="false" multiValued="true"/>
+
     <!-- Compatibility with portal-org indexes -->
     <field name="ti" type="text" indexed="true" stored="false" multiValued="true" />
     <field name="au" type="text" indexed="true" stored="false" multiValued="true"/>
@@ -323,7 +327,11 @@
  <!-- Copy lis source_language field to filter language -->
  <copyField source="source_language_display" dest="language" />
 
-<!-- Sort -->
-<copyField source="title" dest="title_sort"/>
+ <!-- Copy LILACS and MEDLIST short title to new search field -->
+ <copyField source="shortened_title" dest="short_title" />
+ <copyField source="medline_shortened_title" dest="short_title" />
+
+ <!-- Sort by title -->
+ <copyField source="title" dest="title_sort"/>
 
 </schema>

@@ -1,0 +1,2 @@
+.env
+solr_indexes/*/data/*
